@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Controle Financeiro</title>
+    <link rel="stylesheet" href="app.css">
+     <script src="app.js"></script>
+</head>
+<body>
+
+    <h1>Controle Financeiro Pessoal</h1>
+
+    <section id="secsalario">
+        <h2>Registrar Salário</h2>
+        <input type="number" id="salario" placeholder="Digite seu salário">
+        <button onclick="salvarSalario()">Salvar Salário</button>
+    </section>
+
+    <section id="secdespesa">
+        <h2>Adicionar Despesa</h2>
+        <input type="date" id="data">
+        <input type="text" id="nome" placeholder="Nome da despesa">
+        <input type="number" id="valor" placeholder="Valor da despesa">
+        <button onclick="adicionarDespesa()">Adicionar</button>
+    </section>
+
+    <section id="seclista">
+        <h2>Lista de Despesas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Nome</th>
+                    <th>Valor</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabeladespesas"></tbody>
+        </table>
+    </section>
+
+    <section id="secresumo">
+        <h2>Resumo</h2>
+        <p><strong>Salário:</strong> R$ <span id="ressalario">0</span></p>
+        <p><strong>Total de despesas:</strong> R$ <span id="restotal">0</span></p>
+        <p><strong>Saldo final:</strong> R$ <span id="ressaldo">0</span></p>
+    </section>
+
+   
+</body>
+</html>
