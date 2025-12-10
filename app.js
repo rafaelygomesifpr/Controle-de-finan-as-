@@ -17,12 +17,6 @@ function salvarSalario() {
     localStorage.setItem("salario", salario);
     atualizarTela();
 }
-function apagarTudo(){
-     despesas.forEach((d, i) => {
-         tabela.innerHTML += `
-     }
-    
-}
 
 function adicionarDespesa() {
     let data = document.getElementById("data").value;
@@ -34,7 +28,7 @@ function adicionarDespesa() {
         return;
     }
 
-    despesas.push({ data, nome, valor: Number(valor) });
+    despesas.push({ data, nome, valor: Number(valor)});
 
     localStorage.setItem("despesas", JSON.stringify(despesas));
 
@@ -45,6 +39,9 @@ function excluirDespesa(indice) {
     despesas.splice(indice, 1);
     localStorage.setItem("despesas", JSON.stringify(despesas));
     atualizarTela();
+}
+function apagarTudo{
+    despesas=[];
 }
 
 function atualizarTela() {
@@ -66,9 +63,11 @@ function atualizarTela() {
                 <td>R$ ${d.valor}</td>
                 <td><button onclick="excluirDespesa(${i})">Excluir</button></td>
             </tr>
-        `;
+        
     });
 }
+
+
 
 
 
