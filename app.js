@@ -43,6 +43,14 @@ function excluirDespesa(indice) {
 function apagarTudo(){
     despesas=[];
 }
+function apagarTudo(){
+    despesas=[];
+     localStorage.setItem("despesas", JSON.stringify(despesas));
+    atualizarTela();
+    salario=[];
+    localStorage.setItem("salario", JSON.stringify(salario));
+    atualizarTela();
+}
 
 function atualizarTela() {
     document.getElementById("ressalario").innerText = salario;
@@ -62,10 +70,11 @@ function atualizarTela() {
                 <td>${d.nome}</td>
                 <td>R$ ${d.valor}</td>
                 <td><button onclick="excluirDespesa(${i})">Excluir</button></td>
-            </tr>
+            </tr>`
         
     });
 }
+
 
 
 
