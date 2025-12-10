@@ -40,7 +40,7 @@ function excluirDespesa(indice) {
     localStorage.setItem("despesas", JSON.stringify(despesas));
     atualizarTela();
 }
-function apagarTudo{
+function apagarTudo(){
     despesas=[];
 }
 
@@ -66,6 +66,7 @@ function atualizarTela() {
         
     });
 }
+
 
 
 
