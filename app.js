@@ -17,7 +17,7 @@ function salvarSalario() {
     localStorage.setItem("salario", salario);
     atualizarTela();
 }
-function apagartudo(){
+function apagarTudo(){
      despesas.forEach((d, i) => {
          tabela.innerHTML += `
      }
@@ -69,6 +69,7 @@ function atualizarTela() {
         `;
     });
 }
+
 
 
 
